@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          weRoutifAI Launching right now !!
+          weRoutifAI Launching right now 4!!
         </p>
         <a
           className="App-link"

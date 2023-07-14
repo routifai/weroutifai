@@ -1,7 +1,16 @@
-runtime: nodejs14
+runtime: nodejs18
 handlers:
+  # Serve all static files with a URL ending with a file extension
+  - url: /(.*\..+)$
+    static_files: build/\1
+    upload: build/(.*\..+)$
+
+  # Build handler
+  - url: /build
+    script: auto
+    secure: always
+
+  # Catch-all handler for index.html
   - url: /.*
     static_files: build/index.html
     upload: build/index.html
-  - url: /
-    static_dir: build
